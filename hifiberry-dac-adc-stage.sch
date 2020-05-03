@@ -1,0 +1,636 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "DAC+ADC Stage IO"
+Date "2019-05-22"
+Rev "1.0"
+Comp "Modul 9"
+Comment1 "js"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+NoConn ~ 2750 2400
+$Comp
+L Connector_Generic:Conn_02x02_Odd_Even J?
+U 1 1 5EAF193D
+P 2450 2300
+AR Path="/5EA6CBC8/5EAF193D" Ref="J?"  Part="1" 
+AR Path="/5EAF193D" Ref="J3"  Part="1" 
+F 0 "J3" H 2500 2517 50  0000 C CNN
+F 1 "DSP" H 2500 2426 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 2450 2300 50  0001 C CNN
+F 3 "~" H 2450 2300 50  0001 C CNN
+	1    2450 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EAF517C
+P 2250 4700
+AR Path="/5EC037F5/5EAF517C" Ref="#PWR?"  Part="1" 
+AR Path="/5EAF517C" Ref="#PWR0101"  Part="1" 
+F 0 "#PWR0101" H 2250 4450 50  0001 C CNN
+F 1 "GND" H 2255 4527 50  0000 C CNN
+F 2 "" H 2250 4700 50  0001 C CNN
+F 3 "" H 2250 4700 50  0001 C CNN
+	1    2250 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2350 3550 2250 3550
+Wire Wire Line
+	2250 3550 2250 3450
+Wire Wire Line
+	2250 3450 2950 3450
+Wire Wire Line
+	2950 3450 2950 3550
+Wire Wire Line
+	2950 3550 2850 3550
+Connection ~ 2250 3450
+Wire Wire Line
+	2250 3450 2250 3400
+$Comp
+L Connector_Generic:Conn_02x10_Odd_Even J?
+U 1 1 5EAF5189
+P 2550 3950
+AR Path="/5EC037F5/5EAF5189" Ref="J?"  Part="1" 
+AR Path="/5EAF5189" Ref="J1"  Part="1" 
+F 0 "J1" H 2600 4567 50  0000 C CNN
+F 1 "IO" H 2600 4476 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x10_P2.54mm_Vertical" H 2550 3950 50  0001 C CNN
+F 3 "~" H 2550 3950 50  0001 C CNN
+	1    2550 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EAF518F
+P 2250 3400
+AR Path="/5EC037F5/5EAF518F" Ref="#PWR?"  Part="1" 
+AR Path="/5EAF518F" Ref="#PWR0102"  Part="1" 
+F 0 "#PWR0102" H 2250 3250 50  0001 C CNN
+F 1 "+5V" H 2265 3573 50  0000 C CNN
+F 2 "" H 2250 3400 50  0001 C CNN
+F 3 "" H 2250 3400 50  0001 C CNN
+	1    2250 3400
+	1    0    0    -1  
+$EndComp
+Text HLabel 3200 3950 2    60   Output ~ 0
+INR-
+Text HLabel 3200 4050 2    60   Output ~ 0
+INL-
+Text HLabel 2000 3950 0    60   Output ~ 0
+INR+
+Text HLabel 2000 4050 0    60   Output ~ 0
+INL+
+Text HLabel 2000 4350 0    60   Input ~ 0
+OUTR+
+Text HLabel 2000 4450 0    60   Input ~ 0
+OUTL+
+Text HLabel 3200 4450 2    60   Input ~ 0
+OUTL-
+Text HLabel 3200 4350 2    60   Input ~ 0
+OUTR-
+Text HLabel 3200 3750 2    60   BiDi ~ 0
+GPIO15
+Text HLabel 2000 3750 0    60   BiDi ~ 0
+GPIO14
+Text HLabel 2000 3650 0    60   BiDi ~ 0
+SDA
+Text HLabel 3200 3650 2    60   BiDi ~ 0
+SCL
+Wire Wire Line
+	3200 3650 2850 3650
+Wire Wire Line
+	2350 3650 2000 3650
+Wire Wire Line
+	2000 3750 2350 3750
+Wire Wire Line
+	2350 3850 2250 3850
+Wire Wire Line
+	2850 3850 2950 3850
+Wire Wire Line
+	2950 4650 2250 4650
+Connection ~ 2250 4650
+Wire Wire Line
+	2250 4650 2250 4700
+Wire Wire Line
+	2850 3750 3200 3750
+Wire Wire Line
+	3200 3950 2850 3950
+Wire Wire Line
+	2850 4050 3200 4050
+Wire Wire Line
+	3200 4350 2850 4350
+Wire Wire Line
+	2850 4450 3200 4450
+Wire Wire Line
+	2000 4450 2350 4450
+Wire Wire Line
+	2350 4350 2000 4350
+Wire Wire Line
+	2000 4050 2350 4050
+Wire Wire Line
+	2350 3950 2000 3950
+Wire Wire Line
+	2250 3850 2250 4150
+Wire Wire Line
+	2950 3850 2950 4150
+Wire Wire Line
+	2350 4150 2250 4150
+Connection ~ 2250 4150
+Wire Wire Line
+	2250 4150 2250 4650
+Wire Wire Line
+	2850 4150 2950 4150
+Connection ~ 2950 4150
+Wire Wire Line
+	2950 4150 2950 4650
+Text HLabel 3200 4250 2    60   Input ~ 0
+MICBIAS
+Wire Wire Line
+	3200 4250 2850 4250
+Text Label 6200 1600 2    60   ~ 0
+GPIO02/I2C1_SDA
+Text Label 6200 1700 2    60   ~ 0
+GPIO03/I2C1_SCL
+Text Label 7950 1800 0    60   ~ 0
+GPIO14/UART0_TX
+Text Label 7950 1900 0    60   ~ 0
+GPIO15/UART0_RX
+Text Label 6200 1800 2    60   ~ 0
+GPIO04/GPCLK0/ARM_TDI
+Text Label 6200 2000 2    60   ~ 0
+GPIO17/SPI1_CE1_N
+Text Label 7950 2000 0    60   ~ 0
+GPIO18/PCM_CLK/SPI1_CE0_N/PWM0
+Text Label 7950 2200 0    60   ~ 0
+GPIO23/SD1_CMD/ARM_RTCK
+Text Label 7950 2300 0    60   ~ 0
+GPIO24/SD1_DAT0/ARM_TDO
+Text Label 6200 2400 2    60   ~ 0
+GPIO10/SPI0_MOSI
+Text Label 6200 2500 2    60   ~ 0
+GPIO09/SPI0_MISO
+Text Label 6200 2600 2    60   ~ 0
+GPIO11/SPI0_SCLK
+Text Label 7950 2500 0    60   ~ 0
+GPIO25/SD1_DAT1/ARM_TCK
+Text Label 7950 2600 0    60   ~ 0
+GPIO08/SPI0_CE0_N
+Text Label 7950 2700 0    60   ~ 0
+GPIO07/SPI0_CE1_N
+Text Label 6200 2200 2    60   ~ 0
+GPIO22/SD1_CLK/ARM_TRST
+Text Label 6200 2100 2    60   ~ 0
+GPIO27/SD1_DAT3/ARM_TMS
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even P?
+U 1 1 5EB4D2BF
+P 7050 2400
+AR Path="/5235E580/5EB4D2BF" Ref="P?"  Part="1" 
+AR Path="/5EB4D2BF" Ref="P1"  Part="1" 
+F 0 "P1" H 7050 3450 60  0000 C CNN
+F 1 "CONN_20X2" V 7050 2400 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 7050 2400 60  0001 C CNN
+F 3 "" H 7050 2400 60  0000 C CNN
+	1    7050 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB4D2C5
+P 6550 3500
+AR Path="/5235E580/5EB4D2C5" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D2C5" Ref="#PWR0103"  Part="1" 
+F 0 "#PWR0103" H 6550 3500 30  0001 C CNN
+F 1 "GND" H 6550 3430 30  0001 C CNN
+F 2 "" H 6550 3500 60  0000 C CNN
+F 3 "" H 6550 3500 60  0000 C CNN
+	1    6550 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 1900 6550 2700
+Connection ~ 6550 2700
+Connection ~ 6550 3400
+Wire Wire Line
+	7650 1700 7650 2100
+Connection ~ 7650 2400
+Connection ~ 7650 2900
+$Comp
+L power:GND #PWR?
+U 1 1 5EB4D2D1
+P 7650 3500
+AR Path="/5235E580/5EB4D2D1" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D2D1" Ref="#PWR0104"  Part="1" 
+F 0 "#PWR0104" H 7650 3500 30  0001 C CNN
+F 1 "GND" H 7650 3430 30  0001 C CNN
+F 2 "" H 7650 3500 60  0000 C CNN
+F 3 "" H 7650 3500 60  0000 C CNN
+	1    7650 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 7650 3100
+Text Label 6200 2900 2    60   ~ 0
+GPIO5
+Text Label 6200 3000 2    60   ~ 0
+GPIO6
+Text Label 6200 3100 2    60   ~ 0
+GPIO13
+Text Label 6200 3200 2    60   ~ 0
+GPIO19/PCM_FS
+Text Label 6200 3300 2    60   ~ 0
+GPIO26
+Text Label 7950 3000 0    60   ~ 0
+GPIO12
+Text Label 7950 3200 0    60   ~ 0
+GPIO16
+Text Label 7950 3300 0    60   ~ 0
+GPIO20/PCM_DIN
+Text Label 7950 3400 0    60   ~ 0
+GPIO21/PCM_DOUT
+Text Label 6200 2800 2    60   ~ 0
+ID_SD
+Text Label 7950 2800 0    60   ~ 0
+ID_SC
+Wire Wire Line
+	6400 1300 6400 1500
+Wire Wire Line
+	7750 1200 7750 1500
+Connection ~ 7750 1500
+Connection ~ 7650 2100
+Text Label 6200 4200 2    60   ~ 0
+GPIO03/I2C1_SCL
+Text Label 7950 4300 0    60   ~ 0
+GPIO14/UART0_TX
+Text Label 7950 4400 0    60   ~ 0
+GPIO15/UART0_RX
+Text Label 6200 4300 2    60   ~ 0
+GPIO04/GPCLK0/ARM_TDI
+Text Label 6200 4500 2    60   ~ 0
+GPIO17/SPI1_CE1_N
+Text Label 7950 4700 0    60   ~ 0
+GPIO23/SD1_CMD/ARM_RTCK
+Text Label 7950 4800 0    60   ~ 0
+GPIO24/SD1_DAT0/ARM_TDO
+Text Label 6200 4900 2    60   ~ 0
+GPIO10/SPI0_MOSI
+Text Label 6200 5000 2    60   ~ 0
+GPIO09/SPI0_MISO
+Text Label 6200 5100 2    60   ~ 0
+GPIO11/SPI0_SCLK
+Text Label 7950 5000 0    60   ~ 0
+GPIO25/SD1_DAT1/ARM_TCK
+Text Label 7950 5100 0    60   ~ 0
+GPIO08/SPI0_CE0_N
+Text Label 7950 5200 0    60   ~ 0
+GPIO07/SPI0_CE1_N
+Text Label 6200 4700 2    60   ~ 0
+GPIO22/SD1_CLK/ARM_TRST
+Text Label 6200 4600 2    60   ~ 0
+GPIO27/SD1_DAT3/ARM_TMS
+$Comp
+L Connector_Generic:Conn_02x20_Odd_Even P?
+U 1 1 5EB4D2F6
+P 7050 4900
+AR Path="/5235E580/5EB4D2F6" Ref="P?"  Part="1" 
+AR Path="/5EB4D2F6" Ref="P2"  Part="1" 
+F 0 "P2" H 7050 5950 60  0000 C CNN
+F 1 "CONN_20X2" V 7050 4900 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical" H 7050 4900 60  0001 C CNN
+F 3 "" H 7050 4900 60  0000 C CNN
+	1    7050 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EB4D2FC
+P 6550 6000
+AR Path="/5235E580/5EB4D2FC" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D2FC" Ref="#PWR0105"  Part="1" 
+F 0 "#PWR0105" H 6550 6000 30  0001 C CNN
+F 1 "GND" H 6550 5930 30  0001 C CNN
+F 2 "" H 6550 6000 60  0000 C CNN
+F 3 "" H 6550 6000 60  0000 C CNN
+	1    6550 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4400 6550 5200
+Connection ~ 6550 5200
+Connection ~ 6550 5900
+Wire Wire Line
+	7650 4200 7650 4600
+Connection ~ 7650 4900
+Connection ~ 7650 5400
+$Comp
+L power:GND #PWR?
+U 1 1 5EB4D308
+P 7650 6000
+AR Path="/5235E580/5EB4D308" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D308" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 7650 6000 30  0001 C CNN
+F 1 "GND" H 7650 5930 30  0001 C CNN
+F 2 "" H 7650 6000 60  0000 C CNN
+F 3 "" H 7650 6000 60  0000 C CNN
+	1    7650 6000
+	1    0    0    -1  
+$EndComp
+Connection ~ 7650 5600
+Text Label 6200 5400 2    60   ~ 0
+GPIO5
+Text Label 6200 5500 2    60   ~ 0
+GPIO6
+Text Label 6200 5600 2    60   ~ 0
+GPIO13
+Text Label 6200 5800 2    60   ~ 0
+GPIO26
+Text Label 7950 5500 0    60   ~ 0
+GPIO12
+Text Label 7950 5700 0    60   ~ 0
+GPIO16
+Text Label 7950 5800 0    60   ~ 0
+GPIO20/PCM_DIN
+Text Label 6200 5300 2    60   ~ 0
+ID_SD
+Text Label 7950 5300 0    60   ~ 0
+ID_SC
+Connection ~ 6400 4000
+Wire Wire Line
+	7750 3700 7750 4000
+Connection ~ 7750 4000
+Connection ~ 7650 4600
+Text Label 6200 4100 2    60   ~ 0
+GPIO02/I2C1_SDA
+Text Label 7950 4500 0    60   ~ 0
+GPIO18/PCM_CLK/SPI1_CE0_N/PWM0
+Text Label 7950 5900 0    60   ~ 0
+GPIO21/PCM_DOUT
+Text Label 6200 5700 2    60   ~ 0
+GPIO19/PCM_FS
+Connection ~ 6400 2300
+$Comp
+L power:+5V #PWR?
+U 1 1 5EB4D321
+P 7750 1200
+AR Path="/5235E580/5EB4D321" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D321" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 7750 1050 50  0001 C CNN
+F 1 "+5V" H 7750 1340 50  0000 C CNN
+F 2 "" H 7750 1200 50  0000 C CNN
+F 3 "" H 7750 1200 50  0000 C CNN
+	1    7750 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EB4D327
+P 7750 3700
+AR Path="/5235E580/5EB4D327" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D327" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 7750 3550 50  0001 C CNN
+F 1 "+5V" H 7750 3840 50  0000 C CNN
+F 2 "" H 7750 3700 50  0000 C CNN
+F 3 "" H 7750 3700 50  0000 C CNN
+	1    7750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCOM #PWR?
+U 1 1 5EB4D32D
+P 6400 1300
+AR Path="/5235E580/5EB4D32D" Ref="#PWR?"  Part="1" 
+AR Path="/5EB4D32D" Ref="#PWR0109"  Part="1" 
+F 0 "#PWR0109" H 6400 1150 50  0001 C CNN
+F 1 "VCOM" H 6400 1450 50  0000 C CNN
+F 2 "" H 6400 1300 50  0000 C CNN
+F 3 "" H 6400 1300 50  0000 C CNN
+	1    6400 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 6400 1500
+Wire Wire Line
+	6550 2700 6550 3400
+Wire Wire Line
+	6550 3400 6550 3500
+Wire Wire Line
+	7650 2400 7650 2900
+Wire Wire Line
+	7650 2900 7650 3100
+Wire Wire Line
+	7650 3100 7650 3500
+Wire Wire Line
+	7750 1500 7750 1600
+Wire Wire Line
+	7650 2100 7650 2400
+Wire Wire Line
+	6550 5200 6550 5900
+Wire Wire Line
+	6550 5900 6550 6000
+Wire Wire Line
+	7650 4900 7650 5400
+Wire Wire Line
+	7650 5400 7650 5600
+Wire Wire Line
+	7650 5600 7650 6000
+Wire Wire Line
+	6400 4000 6400 4800
+Wire Wire Line
+	7750 4000 7750 4100
+Wire Wire Line
+	7650 4600 7650 4900
+Wire Wire Line
+	6400 2300 6400 4000
+Wire Wire Line
+	6400 1500 6400 2300
+Wire Wire Line
+	7350 4000 7750 4000
+Wire Wire Line
+	7350 4100 7750 4100
+Wire Wire Line
+	7350 4200 7650 4200
+Wire Wire Line
+	7350 4300 7950 4300
+Wire Wire Line
+	7350 4400 7950 4400
+Wire Wire Line
+	6550 4400 6850 4400
+Wire Wire Line
+	6200 4300 6850 4300
+Wire Wire Line
+	6200 4200 6850 4200
+Wire Wire Line
+	6200 4100 6850 4100
+Wire Wire Line
+	6400 4000 6850 4000
+Wire Wire Line
+	6200 4500 6850 4500
+Wire Wire Line
+	6200 4600 6850 4600
+Wire Wire Line
+	6200 4700 6850 4700
+Wire Wire Line
+	6400 4800 6850 4800
+Wire Wire Line
+	6200 4900 6850 4900
+Wire Wire Line
+	6200 5000 6850 5000
+Wire Wire Line
+	6200 5100 6850 5100
+Wire Wire Line
+	7350 4500 7950 4500
+Wire Wire Line
+	7350 4600 7650 4600
+Wire Wire Line
+	7350 4700 7950 4700
+Wire Wire Line
+	7350 4800 7950 4800
+Wire Wire Line
+	7350 4900 7650 4900
+Wire Wire Line
+	7350 5000 7950 5000
+Wire Wire Line
+	7350 5100 7950 5100
+Wire Wire Line
+	7350 5200 7950 5200
+Wire Wire Line
+	7350 5300 7950 5300
+Wire Wire Line
+	7350 5400 7650 5400
+Wire Wire Line
+	7350 5500 7950 5500
+Wire Wire Line
+	7350 5600 7650 5600
+Wire Wire Line
+	7350 5700 7950 5700
+Wire Wire Line
+	7350 5800 7950 5800
+Wire Wire Line
+	7350 5900 7950 5900
+Wire Wire Line
+	6550 5900 6850 5900
+Wire Wire Line
+	6200 5800 6850 5800
+Wire Wire Line
+	6200 5700 6850 5700
+Wire Wire Line
+	6200 5600 6850 5600
+Wire Wire Line
+	6200 5500 6850 5500
+Wire Wire Line
+	6200 5400 6850 5400
+Wire Wire Line
+	6200 5300 6850 5300
+Wire Wire Line
+	6550 5200 6850 5200
+Wire Wire Line
+	6400 1500 6850 1500
+Wire Wire Line
+	6200 1800 6850 1800
+Wire Wire Line
+	6550 1900 6850 1900
+Wire Wire Line
+	6200 2000 6850 2000
+Wire Wire Line
+	6400 2300 6850 2300
+Wire Wire Line
+	6200 2400 6850 2400
+Wire Wire Line
+	6200 2500 6850 2500
+Wire Wire Line
+	6200 2600 6850 2600
+Wire Wire Line
+	6550 2700 6850 2700
+Wire Wire Line
+	6200 2900 6850 2900
+Wire Wire Line
+	6200 3100 6850 3100
+Wire Wire Line
+	6200 3300 6850 3300
+Wire Wire Line
+	6550 3400 6850 3400
+Wire Wire Line
+	7350 3200 7950 3200
+Wire Wire Line
+	7350 3100 7650 3100
+Wire Wire Line
+	7350 3000 7950 3000
+Wire Wire Line
+	7350 2900 7650 2900
+Wire Wire Line
+	7350 2700 7950 2700
+Wire Wire Line
+	7350 2600 7950 2600
+Wire Wire Line
+	7350 2500 7950 2500
+Wire Wire Line
+	7350 2400 7650 2400
+Wire Wire Line
+	7350 2300 7950 2300
+Wire Wire Line
+	7350 2200 7950 2200
+Wire Wire Line
+	7350 2100 7650 2100
+Wire Wire Line
+	7350 1700 7650 1700
+Wire Wire Line
+	7350 1600 7750 1600
+Wire Wire Line
+	7350 1500 7750 1500
+Wire Wire Line
+	7350 1800 9750 1800
+Wire Wire Line
+	7350 1900 9750 1900
+Text HLabel 9750 1900 2    60   BiDi ~ 0
+GPIO15
+Text HLabel 9750 1800 2    60   BiDi ~ 0
+GPIO14
+Text HLabel 4700 1600 0    60   BiDi ~ 0
+SDA
+Text HLabel 4700 1700 0    60   Output ~ 0
+SCL
+Wire Wire Line
+	4700 1700 6850 1700
+Wire Wire Line
+	6850 1600 4700 1600
+Wire Wire Line
+	7950 2000 7350 2000
+Wire Wire Line
+	7950 2800 7350 2800
+Wire Wire Line
+	7950 3300 7350 3300
+Wire Wire Line
+	7350 3400 7950 3400
+Wire Wire Line
+	6200 2100 6850 2100
+Wire Wire Line
+	6200 2200 6850 2200
+Wire Wire Line
+	6850 2800 6200 2800
+Wire Wire Line
+	6200 3000 6850 3000
+Wire Wire Line
+	6850 3200 6200 3200
+Text Label 2250 2400 2    60   ~ 0
+DSP_ENABLE
+Text Label 2250 2300 2    60   ~ 0
+DSP_IN
+Text Label 2750 2300 0    60   ~ 0
+DSP_OUT
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even P5
+U 1 1 5EB767BE
+P 2600 5850
+F 0 "P5" H 2650 6167 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 2650 6076 50  0000 C CNN
+F 2 "" H 2600 5850 50  0001 C CNN
+F 3 "~" H 2600 5850 50  0001 C CNN
+	1    2600 5850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

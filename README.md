@@ -1,3 +1,3 @@
 # DAC+ ADC Stage
 
-![board](board-render.jpg "DAC+ ADC Stage")
+![board](meta/brd.png "DAC+ ADC Stage IO connectors")
